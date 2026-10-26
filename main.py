@@ -43,3 +43,21 @@ def hitung_prediksi():
         prediksi = "Bahasa"
     else:
         prediksi = "Teknologi Informasi"
+
+    # Simpan ke database SQLite
+    try:
+        conn = sqlite3.connect("database_nilai.db")
+        cursor = conn.cursor()
+        cursor.execute("""
+            INSERT INTO nilai_siswa (nama_siswa, biologi, fisika, inggris, prediksi_fakultas)
+            VALUES (?, ?, ?, ?, ?)
+        """, (nama, bio, fis, ing, prediksi))
+        conn.commit()
+        conn.close()
+    except Exception as e:
+        messagebox.showerror("Error Database", f"Gagal menyimpan data: {e}")
+        return
+
+    lbl_hasil.config(text=prediksi, fg="#2563eb")
+    lbl_status.config(text=f"Selamat {nama}, data disimpan & cocok di prodi ini!", fg="#16a34a")
+    messagebox.showinfo("Sukses", "Data nilai berhasil diproses dan disimpan ke database!")
