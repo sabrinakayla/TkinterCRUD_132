@@ -95,3 +95,16 @@ entry_inggris = tk.Entry(frame_form, font=("Segoe UI", 9), width=12, bg="#f8fafc
 entry_inggris.grid(row=4, column=1, sticky="w", pady=6, ipady=2)
 
 frame_form.columnconfigure(1, weight=1)
+
+tk.Button(root, text="Hasil Prediksi", font=("Segoe UI", 10, "bold"), bg="#2563eb", fg="white", bd=0, cursor="hand2", command=hitung_prediksi).pack(pady=15, ipadx=20, ipady=6)
+
+frame_hasil = tk.Frame(root, bg="#eff6ff", bd=1, relief="solid")
+frame_hasil.pack(padx=25, pady=(0, 20), fill="x")
+
+tk.Label(frame_hasil, text="Hasil Prediksi Prodi:", font=("Segoe UI", 9), bg="#eff6ff", fg="#64748b").pack(pady=(10, 0))
+lbl_hasil = tk.Label(frame_hasil, text="-", font=("Segoe UI", 14, "bold"), bg="#eff6ff", fg="#1e293b")
+lbl_hasil.pack(pady=2)
+lbl_status = tk.Label(frame_hasil, text="Klik 'Hasil Prediksi' untuk melihat hasil", font=("Segoe UI", 8, "italic"), bg="#eff6ff", fg="#94a3b8")
+lbl_status.pack(pady=(0, 10))
+
+root.mainloop()
