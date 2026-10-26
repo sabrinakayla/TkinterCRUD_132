@@ -18,3 +18,18 @@ def inisialisasi_db():
     """)
     conn.commit()
     conn.close()
+
+    # Fungsi untuk memproses prediksi dan menyimpan ke database
+def hitung_prediksi():
+    nama = entry_nama.get().strip()
+    if not nama:
+        messagebox.showwarning("Peringatan", "Silakan masukkan nama siswa terlebih dahulu!")
+        return
+    
+    try:
+        bio = int(entry_biologi.get().strip())
+        fis = int(entry_fisika.get().strip())
+        ing = int(entry_inggris.get().strip())
+    except ValueError:
+        messagebox.showerror("Error", "Nilai Biologi, Fisika, dan Inggris harus berupa angka!")
+        return
