@@ -33,3 +33,13 @@ def hitung_prediksi():
     except ValueError:
         messagebox.showerror("Error", "Nilai Biologi, Fisika, dan Inggris harus berupa angka!")
         return
+
+    # Kondisi penentuan prodi sesuai ketentuan praktikum
+    if bio > fis and bio > ing:
+        prediksi = "Kedokteran"
+    elif fis > bio and fis > ing:
+        prediksi = "Teknik"
+    elif ing > bio and ing > fis:
+        prediksi = "Bahasa"
+    else:
+        prediksi = "Teknologi Informasi"
