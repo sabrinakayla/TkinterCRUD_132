@@ -75,3 +75,9 @@ tk.Label(root, text="Masukkan nilai Biologi, Fisika, dan Inggris", font=("Segoe 
 
 frame_form = tk.Frame(root, bg="#ffffff", bd=1, relief="solid", padx=20, pady=15)
 frame_form.pack(padx=25, pady=5, fill="both", expand=True)
+
+tk.Label(frame_form, text="Nama Siswa", font=("Segoe UI", 9, "bold"), bg="#ffffff", fg="#334155").grid(row=0, column=0, sticky="w", pady=(0, 5))
+entry_nama = tk.Entry(frame_form, font=("Segoe UI", 10), bg="#f8fafc", relief="solid", bd=1)
+entry_nama.grid(row=0, column=1, sticky="ew", pady=(0, 5), ipady=3)
+
+tk.Frame(frame_form, height=1, bg="#e2e8f0").grid(row=1, column=0, columnspan=2, sticky="ew", pady=10)
