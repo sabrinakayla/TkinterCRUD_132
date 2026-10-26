@@ -69,3 +69,9 @@ root.title("Aplikasi Prediksi Prodi Pilihan")
 root.geometry("480x600")
 root.configure(bg="#f8fafc")
 root.resizable(False, False)
+
+tk.Label(root, text="PREDIKSI PRODI PILIHAN", font=("Segoe UI", 16, "bold"), bg="#f8fafc", fg="#0f172a").pack(pady=(15, 2))
+tk.Label(root, text="Masukkan nilai Biologi, Fisika, dan Inggris", font=("Segoe UI", 9), bg="#f8fafc", fg="#64748b").pack(pady=(0, 10))
+
+frame_form = tk.Frame(root, bg="#ffffff", bd=1, relief="solid", padx=20, pady=15)
+frame_form.pack(padx=25, pady=5, fill="both", expand=True)
