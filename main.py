@@ -61,3 +61,11 @@ def hitung_prediksi():
     lbl_hasil.config(text=prediksi, fg="#2563eb")
     lbl_status.config(text=f"Selamat {nama}, data disimpan & cocok di prodi ini!", fg="#16a34a")
     messagebox.showinfo("Sukses", "Data nilai berhasil diproses dan disimpan ke database!")
+
+    inisialisasi_db()
+
+root = tk.Tk()
+root.title("Aplikasi Prediksi Prodi Pilihan")
+root.geometry("480x600")
+root.configure(bg="#f8fafc")
+root.resizable(False, False)
