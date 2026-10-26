@@ -81,3 +81,17 @@ entry_nama = tk.Entry(frame_form, font=("Segoe UI", 10), bg="#f8fafc", relief="s
 entry_nama.grid(row=0, column=1, sticky="ew", pady=(0, 5), ipady=3)
 
 tk.Frame(frame_form, height=1, bg="#e2e8f0").grid(row=1, column=0, columnspan=2, sticky="ew", pady=10)
+
+tk.Label(frame_form, text="Nilai Biologi", font=("Segoe UI", 9), bg="#ffffff", fg="#475569").grid(row=2, column=0, sticky="w", pady=6)
+entry_biologi = tk.Entry(frame_form, font=("Segoe UI", 9), width=12, bg="#f8fafc", relief="solid", bd=1, justify="center")
+entry_biologi.grid(row=2, column=1, sticky="w", pady=6, ipady=2)
+
+tk.Label(frame_form, text="Nilai Fisika", font=("Segoe UI", 9), bg="#ffffff", fg="#475569").grid(row=3, column=0, sticky="w", pady=6)
+entry_fisika = tk.Entry(frame_form, font=("Segoe UI", 9), width=12, bg="#f8fafc", relief="solid", bd=1, justify="center")
+entry_fisika.grid(row=3, column=1, sticky="w", pady=6, ipady=2)
+
+tk.Label(frame_form, text="Nilai Inggris", font=("Segoe UI", 9), bg="#ffffff", fg="#475569").grid(row=4, column=0, sticky="w", pady=6)
+entry_inggris = tk.Entry(frame_form, font=("Segoe UI", 9), width=12, bg="#f8fafc", relief="solid", bd=1, justify="center")
+entry_inggris.grid(row=4, column=1, sticky="w", pady=6, ipady=2)
+
+frame_form.columnconfigure(1, weight=1)
